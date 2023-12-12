@@ -59,8 +59,8 @@ Material:
     m_Floats:
     - _FresnelScale: 0.75
     - _GerstnerIntensity: 1
-    - _ReflDistort: 1.5
-    - _RefrDistort: 1.5
+    - _ReflDistort: 0.61
+    - _RefrDistort: 0.53
     - _Shininess: 200
     - _WaveScale: 0.02
     m_Colors:
@@ -88,7 +88,7 @@ Material:
     - _ReflectionTex_ST: {r: 1, g: 1, b: 0, a: 0}
     - _ReflectiveColorCube_ST: {r: 1, g: 1, b: 0, a: 0}
     - _ReflectiveColor_ST: {r: 1, g: 1, b: 0, a: 0}
-    - _RefrColor: {r: 0.3066038, g: 0.6774379, b: 1, a: 1}
+    - _RefrColor: {r: 0.4968405, g: 0.9264914, b: 0.9575472, a: 1}
     - _RefractionTex_ST: {r: 1, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 0.72, g: 0.72, b: 0.72, a: 1}
     - _WorldLightDir: {r: 0, g: 0.1, b: -0.5, a: 0}

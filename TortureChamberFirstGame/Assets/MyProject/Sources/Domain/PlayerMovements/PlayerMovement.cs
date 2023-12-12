@@ -25,7 +25,10 @@ namespace MyProject.Sources.Domain.PlayerMovement
 
         public Vector3 GetDirection(float runInput, Vector3 cameraDirection)
         {
-            float speed = runInput * _characteristic.RunSpeed + _characteristic.MovementSpeed;
+            // float speed = runInput * _characteristic.RunSpeed + _characteristic.MovementSpeed;
+            // runInput 
+            // float speed =_characteristic.RunSpeed / runInput * 2;
+            float speed = runInput == 0 ? _characteristic.RunSpeed : _characteristic.MovementSpeed;
             Vector3 direction = cameraDirection * speed * Time.deltaTime;
             direction.y = cameraDirection.y;
 
@@ -57,10 +60,15 @@ namespace MyProject.Sources.Domain.PlayerMovement
             return _characteristic.AngularSpeed * Time.deltaTime;
         }
 
+        //TODo заменить ран инпут
         public float GetMaxSpeed(Vector2 moveInput, float runInput)
         {
             float maxMovementValue = Mathf.Max(Mathf.Abs(moveInput.x), Mathf.Abs(moveInput.y));
-            return runInput * maxMovementValue + maxMovementValue; 
+            //TODO вынести в метод
+            float speed = runInput == 0 ? maxMovementValue * 2 : maxMovementValue;
+            
+            // return runInput * maxMovementValue + maxMovementValue; 
+            return speed;
         }
     }
 }
